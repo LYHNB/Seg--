@@ -2,8 +2,10 @@ package com.lxxx.controller.admin;
 
 import com.lxxx.constant.JwtClaimsConstant;
 import com.lxxx.dto.EmployeeLoginDTO;
+import com.lxxx.dto.EmployeePageQueryDTO;
 import com.lxxx.entity.Employee;
 import com.lxxx.properties.JwtProperties;
+import com.lxxx.result.PageResult;
 import com.lxxx.result.Result;
 import com.lxxx.service.EmployeeService;
 import com.lxxx.utils.JwtUtil;
@@ -21,7 +23,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 员工管理
+ * @Description: 分页查询返回结果
+ * @ClassName: PageResult
+ * @Author: ILx
  */
 @RestController
 @Slf4j
@@ -38,11 +42,14 @@ public class EmployeeController {
         return Result.success();
     }
 
-    /**
-     * 员工登录
-     * @param employeeLoginDTO
-     * @return
-     */
+
+    /** 
+    * @Description: 员工登录
+    * @Param: [employeeLoginDTO]
+    * @return: com.lxxx.result.Result<com.lxxx.vo.EmployeeLoginVO>
+    * @Author: ILx
+    * @Date: 2024/6/27
+    */
     @PostMapping("/login")
     @ApiOperation(value = "员工登录")
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO){
@@ -68,9 +75,18 @@ public class EmployeeController {
 
         return Result.success(employeeLoginVO);
     }
-/*    @GetMapping("/employee")
-    @ApiOperation(value = "员工查询")
-    public Result<EmployeeLoginVO> employeeFind(@RequestBody EmployeeLoginDTO employeeLoginDTO){
-
-    }*/
+    /** 
+    * @Description: 员工分页查询
+    * @param: [employeePageQueryDTO]
+    * @return: com.lxxx.result.Result<com.lxxx.result.PageResult>
+    * @Author: ILx
+    * @Date: 2024/6/27
+    */
+    @GetMapping("/page")
+    @ApiOperation(value = "员工分页查询")
+    public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO){
+        log.info("分页查询，参数为：{}", employeePageQueryDTO);
+        PageResult pageResult = employeeService.pageQuery(employeePageQueryDTO);
+        return Result.success(pageResult);
+    }
 }
