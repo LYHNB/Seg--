@@ -31,7 +31,7 @@
         <aspectj>1.9.4</aspectj>
         <jjwt>0.9.1</jjwt>
         <jaxb-api>2.3.1</jaxb-api>
-        <pagehelper>1.4.2</pagehelper>
+        <pagehelper>1.4.6</pagehelper>
     </properties>
 
     <dependencyManagement>
@@ -69,7 +69,7 @@
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>1.4.6</version>
+                <version>${pagehelper}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

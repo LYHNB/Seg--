@@ -1,6 +1,9 @@
 package com.lxxx.interceptor;
 
 import com.lxxx.constant.JwtClaimsConstant;
+import com.lxxx.constant.MessageConstant;
+import com.lxxx.exception.AccountNotFoundException;
+import com.lxxx.exception.EmployeeNotLogin;
 import com.lxxx.properties.JwtProperties;
 import com.lxxx.utils.JwtUtil;
 import io.jsonwebtoken.Claims;
@@ -34,6 +37,7 @@ public class JwtTokenCheckInterceptor implements HandlerInterceptor {
             //当前拦截到的不是动态方法，直接放行
             return true;
         }
+        log.info("登录校验");
 
         //1、从请求头中获取令牌
         String token = request.getHeader(jwtProperties.getAdminTokenName());
@@ -49,7 +53,7 @@ public class JwtTokenCheckInterceptor implements HandlerInterceptor {
         } catch (Exception ex) {
             //4、不通过，响应401状态码
             response.setStatus(401);
-            return false;
+            throw new EmployeeNotLogin(MessageConstant.EMPLOYEE_NOT_LOGIN);
         }
     }
 }

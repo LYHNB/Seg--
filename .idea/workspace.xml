@@ -4,20 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9106ca17-4d15-4d07-ba6b-a275b9fec828" name="Changes" comment="Word分割初始代码（含登录）">
+    <list default="true" id="9106ca17-4d15-4d07-ba6b-a275b9fec828" name="Changes" comment="员工分页查询">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/00e3bd77-3416-444b-ae49-3ac7c683e04d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/00e3bd77-3416-444b-ae49-3ac7c683e04d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/result/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/result/PageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/result/Reaaa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/constant/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/exception/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/exception/BaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeePageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/controller/admin/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/interceptor/JwtTokenCheckInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/interceptor/JwtTokenCheckInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +68,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Maven.word-seg [org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.word-seg [org.apache.maven.plugins:maven-install-plugin:2.5.2:install].executor&quot;: &quot;Run&quot;,
     &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -85,7 +89,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.DateTimeUtil.executor&quot;: &quot;Run&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -108,7 +113,7 @@
       <recent name="com.lxxx.result" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SegApplication">
+  <component name="RunManager">
     <configuration name="SegApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="seg-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lxxx.SegApplication" />
@@ -118,13 +123,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SegServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="seg-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lxxx.segserver.SegServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,7 +164,22 @@
       <workItem from="1719567123289" duration="1942000" />
       <workItem from="1719670137508" duration="325000" />
       <workItem from="1719670470056" duration="2908000" />
-      <workItem from="1719925337962" duration="2875000" />
+      <workItem from="1719925337962" duration="3538000" />
+      <workItem from="1719994140890" duration="9692000" />
+      <workItem from="1720057000996" duration="8174000" />
+      <workItem from="1720142018133" duration="7424000" />
+      <workItem from="1720519420937" duration="1440000" />
+      <workItem from="1720661151701" duration="612000" />
+      <workItem from="1720749510630" duration="1695000" />
+      <workItem from="1720962701832" duration="81000" />
+      <workItem from="1720965338354" duration="1031000" />
+      <workItem from="1721006739084" duration="202000" />
+      <workItem from="1721006948271" duration="1551000" />
+      <workItem from="1721008508773" duration="11350000" />
+      <workItem from="1721702878970" duration="5612000" />
+      <workItem from="1721805266015" duration="4544000" />
+      <workItem from="1721872402140" duration="6055000" />
+      <workItem from="1721976916131" duration="7820000" />
     </task>
     <task id="LOCAL-00001" summary="Word分割初始代码（含登录）">
       <option name="closed" value="true" />
@@ -176,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718347117731</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="员工分页查询">
+      <option name="closed" value="true" />
+      <created>1719928359847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719928359848</updated>
+    </task>
+    <task id="LOCAL-00003" summary="员工分页查询">
+      <option name="closed" value="true" />
+      <created>1719928406120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719928406120</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,18 +213,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Word分割初始代码（含登录）" />
-    <option name="LAST_COMMIT_MESSAGE" value="Word分割初始代码（含登录）" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/config/WebMvcConfiguration.java</url>
-          <line>97</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="员工分页查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="员工分页查询" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

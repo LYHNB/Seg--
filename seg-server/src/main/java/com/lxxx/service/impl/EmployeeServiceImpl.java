@@ -4,6 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.lxxx.constant.MessageConstant;
 import com.lxxx.constant.StatusConstant;
+import com.lxxx.dto.EmployeeAddDTO;
 import com.lxxx.dto.EmployeeLoginDTO;
 import com.lxxx.dto.EmployeePageQueryDTO;
 import com.lxxx.entity.Employee;
@@ -13,9 +14,11 @@ import com.lxxx.exception.AccountLockedException;
 import com.lxxx.mapper.EmployeeMapper;
 import com.lxxx.result.PageResult;
 import com.lxxx.service.EmployeeService;
+import com.lxxx.utils.DateTimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -28,6 +31,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeMapper employeeMapper;
 
+    /**
+     * 员工登录
+     *
+     * @param: [employeeLoginDTO]
+     * @return: com.lxxx.entity.Employee
+     * @Author: ILx
+     * @Date: 2024/7/3
+     */
     @Override
     public Employee login(EmployeeLoginDTO employeeLoginDTO) {
 
@@ -61,6 +72,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     /**
      * 分页查询
+     *
      * @param: [employeePageQueryDTO]
      * @return: com.lxxx.result.PageResult
      * @Author: ILx
@@ -70,10 +82,63 @@ public class EmployeeServiceImpl implements EmployeeService {
     public PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO) {
         //开始分页
         PageHelper.startPage(employeePageQueryDTO.getPage(), employeePageQueryDTO.getPageSize());
-        Page<Employee> page =  employeeMapper.pageQuery(employeePageQueryDTO);
+        Page<Employee> page = employeeMapper.pageQuery(employeePageQueryDTO);
         //获得返回值并封装
         long total = page.getTotal();
         List<Employee> records = page.getResult();
         return new PageResult(total, records);
+    }
+
+    /**
+     * 员工删除操作
+     *
+     * @param id
+     * @param: [id]
+     * @return: void
+     * @Author: ILx
+     * @Date: 2024/7/15
+     */
+    @Override
+    public void delete(Long id) {
+        employeeMapper.delete(id);
+    }
+
+    /**
+     * 员工启用禁用
+     *
+     * @param: [id, status]
+     * @return: void
+     * @Author: ILx
+     * @Date: 2024/7/15
+     */
+    @Override
+    public void updataStatus(Long id, Integer status) {
+        Employee employee = Employee.builder()
+                .status(status)
+                .id(id)
+                .build();
+        employeeMapper.update(employee);
+    }
+
+    /**
+     * 新增员工
+     *
+     * @param: [name, username, password]
+     * @return: void
+     * @Author: ILx
+     * @Date: 2024/7/25
+     */
+    @Override
+    public void addEmp(String name, String username, String password) {
+        Employee employee = Employee.builder()
+                .name(name)
+                .username(username)
+                .password(password)
+                .status(StatusConstant.ENABLE)
+                //.createTime(LocalDateTime.parse(DateTimeUtil.getCurrentDateTime()))
+                .createTime(DateTimeUtil.getCurrentDateTime())
+                .updateTime(DateTimeUtil.getCurrentDateTime())
+                .build();
+        employeeMapper.add(employee);
     }
 }

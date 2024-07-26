@@ -14,7 +14,7 @@ import lombok.Data;
 @Data
 @ApiModel("员工分页查询时传递的数据模型")
 public class EmployeePageQueryDTO {
-    @ApiModelProperty("员工姓名")
+    @ApiModelProperty("姓名")
     private String name;
 
     @ApiModelProperty("页码")
