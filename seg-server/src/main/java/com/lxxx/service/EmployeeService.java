@@ -1,6 +1,6 @@
 package com.lxxx.service;
 
-import com.lxxx.dto.EmployeeAddDTO;
+import com.lxxx.dto.EmployeeDTO;
 import com.lxxx.dto.EmployeeLoginDTO;
 import com.lxxx.dto.EmployeePageQueryDTO;
 import com.lxxx.entity.Employee;
@@ -47,5 +47,23 @@ public interface EmployeeService {
      */
     void updataStatus(Long id, Integer status);
 
-    void addEmp(String name, String username, String password);
+    /**
+     * 新增员工
+     *
+     * @param: [name, username, password]
+     * @return: void
+     * @Author: ILx
+     * @Date: 2024/7/29
+     */
+    void addEmp(EmployeeDTO employAddDTO);
+
+    /**
+     * 编辑员工信息
+     *
+     * @param: [employeeAddDTO]
+     * @return: void
+     * @Author: ILx
+     * @Date: 2024/7/29
+     */
+    void update(EmployeeDTO employeeDTO);
 }

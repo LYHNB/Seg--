@@ -4,7 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.lxxx.constant.MessageConstant;
 import com.lxxx.constant.StatusConstant;
-import com.lxxx.dto.EmployeeAddDTO;
+import com.lxxx.dto.EmployeeDTO;
 import com.lxxx.dto.EmployeeLoginDTO;
 import com.lxxx.dto.EmployeePageQueryDTO;
 import com.lxxx.entity.Employee;
@@ -15,10 +15,10 @@ import com.lxxx.mapper.EmployeeMapper;
 import com.lxxx.result.PageResult;
 import com.lxxx.service.EmployeeService;
 import com.lxxx.utils.DateTimeUtil;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -92,7 +92,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     /**
      * 员工删除操作
      *
-     * @param id
      * @param: [id]
      * @return: void
      * @Author: ILx
@@ -129,16 +128,31 @@ public class EmployeeServiceImpl implements EmployeeService {
      * @Date: 2024/7/25
      */
     @Override
-    public void addEmp(String name, String username, String password) {
+    public void addEmp(EmployeeDTO employeeAddDTO) {
         Employee employee = Employee.builder()
-                .name(name)
-                .username(username)
-                .password(password)
+                .name(employeeAddDTO.getName())
+                .username(employeeAddDTO.getUsername())
+                .password(employeeAddDTO.getPassword())
                 .status(StatusConstant.ENABLE)
-                //.createTime(LocalDateTime.parse(DateTimeUtil.getCurrentDateTime()))
                 .createTime(DateTimeUtil.getCurrentDateTime())
                 .updateTime(DateTimeUtil.getCurrentDateTime())
                 .build();
         employeeMapper.add(employee);
+    }
+
+    /**
+     * 编辑员工信息
+     *
+     * @param: [employeeAddDTO]
+     * @return: void
+     * @Author: ILx
+     * @Date: 2024/7/29
+     */
+    @Override
+    public void update(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO, employee);
+        employee.setUpdateTime(DateTimeUtil.getCurrentDateTime());
+        employeeMapper.update(employee);
     }
 }

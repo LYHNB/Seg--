@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9106ca17-4d15-4d07-ba6b-a275b9fec828" name="Changes" comment="员工分页查询">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/00e3bd77-3416-444b-ae49-3ac7c683e04d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/00e3bd77-3416-444b-ae49-3ac7c683e04d.xml" afterDir="false" />
+    <list default="true" id="9106ca17-4d15-4d07-ba6b-a275b9fec828" name="Changes" comment="用户登录完善，实现新增员工">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/constant/MessageConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/exception/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/exception/BaseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeePageQueryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeeAddDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeeDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/controller/admin/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/interceptor/JwtTokenCheckInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/interceptor/JwtTokenCheckInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,38 +58,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.word-seg [org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.word-seg [org.apache.maven.plugins:maven-install-plugin:2.5.2:install].executor&quot;: &quot;Run&quot;,
-    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SegApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.SegServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code_Save/IDEA/word-seg&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.DateTimeUtil.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.word-seg [org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file].executor": "Run",
+    "Maven.word-seg [org.apache.maven.plugins:maven-install-plugin:2.5.2:install].executor": "Run",
+    "OverrideImplement.generate.javadoc": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.SegApplication.executor": "Debug",
+    "Spring Boot.SegServerApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "11",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Code_Save/IDEA/word-seg",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.itangcent.idea.plugin.configurable.AccountConfigurable.apifox",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.DateTimeUtil.executor": "Run"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code_Save\IDEA\word-seg\seg-common\src\main\java\com\lxxx\json" />
@@ -179,7 +171,9 @@
       <workItem from="1721702878970" duration="5612000" />
       <workItem from="1721805266015" duration="4544000" />
       <workItem from="1721872402140" duration="6055000" />
-      <workItem from="1721976916131" duration="7820000" />
+      <workItem from="1721976916131" duration="10739000" />
+      <workItem from="1722215601200" duration="490000" />
+      <workItem from="1722216099987" duration="10305000" />
     </task>
     <task id="LOCAL-00001" summary="Word分割初始代码（含登录）">
       <option name="closed" value="true" />
@@ -205,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719928406120</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="用户登录完善，实现新增员工">
+      <option name="closed" value="true" />
+      <created>1721986517949</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721986517949</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +216,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Word分割初始代码（含登录）" />
     <MESSAGE value="员工分页查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="员工分页查询" />
+    <MESSAGE value="用户登录完善，实现新增员工" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户登录完善，实现新增员工" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

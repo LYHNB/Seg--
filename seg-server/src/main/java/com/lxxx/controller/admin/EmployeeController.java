@@ -1,7 +1,7 @@
 package com.lxxx.controller.admin;
 
 import com.lxxx.constant.JwtClaimsConstant;
-import com.lxxx.dto.EmployeeAddDTO;
+import com.lxxx.dto.EmployeeDTO;
 import com.lxxx.dto.EmployeeLoginDTO;
 import com.lxxx.dto.EmployeePageQueryDTO;
 import com.lxxx.entity.Employee;
@@ -13,21 +13,13 @@ import com.lxxx.utils.JwtUtil;
 import com.lxxx.vo.EmployeeLoginVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Delete;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @Description: 分页查询返回结果
- * @ClassName: PageResult
- * @Author: ILx
- */
 @RestController
 @Slf4j
 @Api(tags = "员工相关接口")
@@ -135,11 +127,29 @@ public class EmployeeController {
      */
     @PostMapping("/employee/add")
     @ApiOperation(value = "新增员工")
-    public Result<?> addEmp(@RequestBody EmployeeAddDTO employeeAddDTO) {
-        String name = employeeAddDTO.getName();
-        String username = employeeAddDTO.getUsername();
-        String password = employeeAddDTO.getPassword();
-        employeeService.addEmp(name, username, password);
+    public Result<?> addEmp(@RequestBody EmployeeDTO employeeAddDTO) {
+        employeeService.addEmp(employeeAddDTO);
+        return Result.success();
+    }
+
+    /*@GetMapping("/employee/{id}")
+    public Result<EmployeeDTO> getById(@PathVariable Long id) {
+        employeeService.getById(id);
+    }*/
+
+    /**
+     * 编辑员工
+     *
+     * @param: [employeeAddDTO]
+     * @return: com.lxxx.result.Result<?>
+     * @Author: ILx
+     * @Date: 2024/7/29
+     */
+    @PutMapping("/employee/update")
+    @ApiOperation("编辑员工信息")
+    public Result<?> update(@RequestBody EmployeeDTO employeeDTO) {
+        log.info("编辑员工信息：{}", employeeDTO);
+        employeeService.update(employeeDTO);
         return Result.success();
     }
 }

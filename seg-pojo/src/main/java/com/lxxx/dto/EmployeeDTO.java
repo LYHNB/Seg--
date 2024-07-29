@@ -6,14 +6,16 @@ import lombok.Data;
 
 /**
  * @Description:
- * @ClassName: EmployeeAddDTO
+ * @ClassName: EmployeeDTO
  * @Author: ILx
  * @Date: 2024/7/24 22:19
  */
 
 @Data
-@ApiModel("新增员工是传递的数据模型")
-public class EmployeeAddDTO {
+@ApiModel("新增员工时传递的数据模型")
+public class EmployeeDTO {
+    @ApiModelProperty("主键id")
+    private Long id;
     @ApiModelProperty("姓名")
     private String name;
     @ApiModelProperty("用户名")
