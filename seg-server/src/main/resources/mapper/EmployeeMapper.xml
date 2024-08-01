@@ -21,7 +21,6 @@
         </set>
         where id = #{id}
     </update>
-
     <!--员工删除-->
     <delete id="delete">
         delete from employee where id = #{id}
@@ -31,8 +30,8 @@
     <select id="pageQuery" resultType="com.lxxx.entity.Employee">
         select * from employee
         <where>
-            <if test="name != null and name !=''">
-                and name like concat('%',#{name},'%')
+            <if test="username != null and username !=''">
+                and username like concat('%',#{username},'%')
             </if>
         </where>
     </select>

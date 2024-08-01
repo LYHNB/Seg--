@@ -62,7 +62,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         ApiInfo apiInfo = new ApiInfoBuilder()
                 .title("Word分割")
                 .version("1.0")
-                .description("Word分割项目接口文档")
+                 .description("Word分割项目接口文档")
                 .build();
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo)

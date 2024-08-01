@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9106ca17-4d15-4d07-ba6b-a275b9fec828" name="Changes" comment="用户登录完善，实现新增员工">
+    <list default="true" id="9106ca17-4d15-4d07-ba6b-a275b9fec828" name="Changes" comment="员工编辑实现、新增完善">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/00e3bd77-3416-444b-ae49-3ac7c683e04d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/00e3bd77-3416-444b-ae49-3ac7c683e04d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/src/main/java/com/lxxx/constant/MessageConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeeAddDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-pojo/src/main/java/com/lxxx/dto/EmployeePageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/config/WebMvcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/controller/admin/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/java/com/lxxx/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seg-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -80,7 +85,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.itangcent.idea.plugin.configurable.AccountConfigurable.apifox",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true",
     "应用程序.DateTimeUtil.executor": "Run"
   },
@@ -173,7 +178,11 @@
       <workItem from="1721872402140" duration="6055000" />
       <workItem from="1721976916131" duration="10739000" />
       <workItem from="1722215601200" duration="490000" />
-      <workItem from="1722216099987" duration="10305000" />
+      <workItem from="1722216099987" duration="10567000" />
+      <workItem from="1722304244590" duration="5555000" />
+      <workItem from="1722389224135" duration="1119000" />
+      <workItem from="1722390838304" duration="99000" />
+      <workItem from="1722390953417" duration="23612000" />
     </task>
     <task id="LOCAL-00001" summary="Word分割初始代码（含登录）">
       <option name="closed" value="true" />
@@ -207,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721986517949</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="员工编辑实现、新增完善">
+      <option name="closed" value="true" />
+      <created>1722262122646</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722262122646</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +234,8 @@
     <MESSAGE value="Word分割初始代码（含登录）" />
     <MESSAGE value="员工分页查询" />
     <MESSAGE value="用户登录完善，实现新增员工" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户登录完善，实现新增员工" />
+    <MESSAGE value="员工编辑实现、新增完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="员工编辑实现、新增完善" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

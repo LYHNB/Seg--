@@ -87,10 +87,10 @@ public class GlobalExceptionHandler {
      * @Author: ILx
      * @Date: 2024/7/26
      */
-    @ExceptionHandler(Exception.class)
+/*    @ExceptionHandler(Exception.class)
     public Result<?> exceptionHandler(Exception ex) {
         log.error("异常类型：{}", ex.getClass().getName());
         log.error("系统异常信息：{}", ex.getMessage());
         return Result.error(MessageConstant.UNKNOWN_ERROR);
-    }
+    }*/
 }

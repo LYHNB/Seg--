@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lxxx.mapper.LogMapper">
+    <!--新增员工-->
+    <insert id="insert" parameterType="com.lxxx.entity.OperateLog">
+        insert into log (operate_user, operate_title, operate_time, class_name, method_name, method_params,
+                              return_value, cost_time, request_type, request_url)
+        values (#{operateUser}, #{operateTitle}, #{operateTime}, #{className}, #{methodName}, #{methodParams},
+                #{returnValue}, #{costTime}, #{requestType},#{requestUrl})
+    </insert>
+</mapper>

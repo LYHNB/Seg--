@@ -24,7 +24,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mybatis.spring>2.2.0</mybatis.spring>
         <lombok>1.18.20</lombok>
-        <fastjson>1.2.76</fastjson>
         <commons.lang>2.6</commons.lang>
         <pagehelper>1.3.0</pagehelper>
         <knife4j>4.4.0</knife4j>
@@ -32,6 +31,7 @@
         <jjwt>0.9.1</jjwt>
         <jaxb-api>2.3.1</jaxb-api>
         <pagehelper>1.4.6</pagehelper>
+        <fastjson>2.0.52</fastjson>
     </properties>
 
     <dependencyManagement>
@@ -40,11 +40,6 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -71,6 +66,12 @@
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper}</version>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

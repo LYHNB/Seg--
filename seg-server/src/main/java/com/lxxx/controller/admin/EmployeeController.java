@@ -5,6 +5,7 @@ import com.lxxx.dto.EmployeeDTO;
 import com.lxxx.dto.EmployeeLoginDTO;
 import com.lxxx.dto.EmployeePageQueryDTO;
 import com.lxxx.entity.Employee;
+import com.lxxx.log.Log;
 import com.lxxx.properties.JwtProperties;
 import com.lxxx.result.PageResult;
 import com.lxxx.result.Result;
@@ -45,6 +46,7 @@ public class EmployeeController {
      */
     @PostMapping("/login")
     @ApiOperation(value = "员工登录")
+    @Log(title = "登录")
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) {
         log.info("员工登录：{}", employeeLoginDTO);
 
@@ -79,6 +81,7 @@ public class EmployeeController {
      */
     @GetMapping("/employee/page")
     @ApiOperation(value = "员工分页查询")
+    @Log(title = "员工列表查询")
     public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO) {
         log.info("分页查询，参数为：{}", employeePageQueryDTO);
         PageResult pageResult = employeeService.pageQuery(employeePageQueryDTO);
@@ -95,6 +98,7 @@ public class EmployeeController {
      */
     @DeleteMapping("/employee/delete/{id}")
     @ApiOperation(value = "员工删除")
+    @Log(title = "员工删除")
     public Result<?> delete(@PathVariable Long id) {
         log.info("员工删除操作,id{}", id);
         employeeService.delete(id);
@@ -111,6 +115,7 @@ public class EmployeeController {
      */
     @PutMapping("/employee/{id}/status")
     @ApiOperation(value = "员工启用禁用")
+    @Log(title = "员工状态设置")
     public Result<?> updateStatus(@PathVariable Long id, @RequestParam Integer status) {
         log.info("员工status修改id:{},status:{}", id, status);
         employeeService.updataStatus(id, status);
@@ -127,6 +132,7 @@ public class EmployeeController {
      */
     @PostMapping("/employee/add")
     @ApiOperation(value = "新增员工")
+    @Log(title = "新增员工")
     public Result<?> addEmp(@RequestBody EmployeeDTO employeeAddDTO) {
         employeeService.addEmp(employeeAddDTO);
         return Result.success();
@@ -147,6 +153,7 @@ public class EmployeeController {
      */
     @PutMapping("/employee/update")
     @ApiOperation("编辑员工信息")
+    @Log(title = "编辑员工信息")
     public Result<?> update(@RequestBody EmployeeDTO employeeDTO) {
         log.info("编辑员工信息：{}", employeeDTO);
         employeeService.update(employeeDTO);
